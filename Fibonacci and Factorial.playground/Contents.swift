@@ -12,7 +12,7 @@ for _ in 0...count {
     print (firstNumber)
 }
 
-//Factorial
+//Factorial 1
 
 var number: Int = 5
 
@@ -24,5 +24,17 @@ for i in 1..<n {
     fact = fact * i
 }
 print("Factorial of ",number," is: ", fact)
+//Factorial 2
 
+func factorial(of num: Int) -> Int {
+    if num == 1 {
+        return 1
+    } else {
+        return num * factorial(of:num - 1)
+    }
+}
 
+let x = 5
+
+let result = factorial(of: x)
+print("Factorial of  \(x)  is:  \(result)")
